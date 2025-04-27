@@ -213,5 +213,49 @@ Background: Changed the background to a consistent color (light blue) to represe
 ## 💬 Final Reflection 
 
 - What did your team learn during this project?
+
+
+I learned a lot about 3D modeling and animation using OpenGL and GLUT. Some of things I learned include:
+
+
+ 1- Basic 3D modeling techniques: I learned how to create and manipulate basic 3D shapes to construct a robot.
+
+
+ 2- Animation fundamentals: I understood how to animate objects by manipulating transformation matrices to create smooth, repeatable 
+    movements.
+
+
+ 3- Lighting and depth: I learned how to set up directional and positional lights to simulate realistic lighting, and how to use depth 
+    testing to ensure proper object rendering order.
+
+
+ 4- Hierarchical modeling ( glPushMatrix() and glPopMatrix() functions ) : I understood how to model and animate different parts of the 
+    robot independently, while keeping the overall structure intact.
+
+
+
 - What was the most challenging and rewarding part?
+
+
+Most Challenging Part:
+
+
+The most challenging aspect of the project was animating the robot smoothly. Getting the legs to walk, the head to rotate, and the wings to flap, while balancing the speed of the movements and ensuring everything loops properly, was difficult.
+Additionally, depth testing and lighting adjustments were also challenging, especially when ensuring the robot’s parts were properly lit and rendered correctly without visual glitches.
+
+
+
+
+Most Rewarding Part:
+
+
+The most rewarding part was seeing the robot come to life after all the animations were working together. Adding interactivity through the keyboard controls for walking and jumping made the robot feel even more alive and engaging.
+
+
+
+
+
+
 - If you had more time, what would you improve or add?
+
+                  -------- 
