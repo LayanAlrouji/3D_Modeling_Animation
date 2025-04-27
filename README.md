@@ -11,6 +11,8 @@ In this project, I designed a bird-inspired robot using basic 3D shapes. It incl
  - A spherical body and head.
  - Moving legs to simulate walking.
  - Rotating wings to simulate bird-like motion.
+
+
 The goal of this project is to create smooth and repeatable movements, providing simple interaction through keyboard controls for walking and jumping.
 It focuses on 3D modeling, animation, and interactive controls to mimic bird-like movements.
 
@@ -27,6 +29,8 @@ It focuses on 3D modeling, animation, and interactive controls to mimic bird-lik
 
 
 This phase focused on creating a more realistic 3D environment. The primary elements involved in setting up the lighting and depth adjustments include:
+
+
 Lighting Setup:
  - Directional Light: Provides consistent lighting from a single direction. This light affects the whole scene equally from a particular 
    angle, much like how the sun illuminates everything in its path.
@@ -44,8 +48,12 @@ To ensure objects are rendered correctly in relation to one another, depth testi
  <img width="437" alt="Screenshot 1446-10-29 at 3 15 30 AM" src="https://github.com/user-attachments/assets/faedd160-c866-4c2f-b9ca-b60975f610b6" />
 
 - describe Challenges and how you addressed them in the challenge table below.( for example GitHub issues that you've faced at this stage and how you solve them with screenshots)
+
+
   Challenge 1 : The lighting caused incorrect shading on parts of the robot.
   Solution : Adjusted lighting intensity, added a second light source.
+
+
 
   Challenge 2 : Objects were overlapping incorrectly due to disabled depth testing.
   Solution : Enabled depth testing with glEnable(GL_DEPTH_TEST)
@@ -55,8 +63,44 @@ To ensure objects are rendered correctly in relation to one another, depth testi
 ## ✅ Phase 2: Robot Construction
 
 - Description of how the robot was modeled using 3D primitives.
+
+
+In this Phase , the robot was designed using basic 3D primitives. Here's how the robot was modeled:
+
+
+
+Body: The body of the robot is represented by a large sphere. It forms the central part of the robot, making it round and simple.
+
+
+
+Head: The head is also modeled using a smaller sphere placed on top of the body.
+
+
+
+Legs: The legs of the robot were initially represented by spheres. These were positioned appropriately and rotated to simulate walking motion.
+
+
+
+Wings: The wings are represented by spheres that rotate around an axis, simulating the movement of a bird's wings.
+
+
+
+glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modeling. Each part of the robot (body, head, legs, wings) was treated as a separate unit that can move independently while keeping the entire structure intact.
+
+
 - Include screenshots of work progress including all the versions you've made.
+<img width="647" alt="Screenshot 1446-10-29 at 3 34 17 AM" src="https://github.com/user-attachments/assets/912bc5fe-6423-4fb1-8df5-494f5531eb73" />
+
+
+
 - describe Challenges and how you addressed them in the challenge table below.
+
+  Challenge 1 : The legs didn’t move or simulate walking.
+  Solution : Used sphere rotation to simulate the movement of the legs back and forth.
+
+
+
+ذ
 
 ---
 ### Week 13
