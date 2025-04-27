@@ -152,8 +152,41 @@ glPushMatrix() & glPopMatrix() functions : used to isolate transformations for e
 ## 🧩 Phase 4: Interaction
 
 - Summary of added controls (keyboard/mouse).
+
+
+I added keyboard controls to interact with the robot's movement:
+
+
+w: When pressing w, the robot starts or stops walking by updating the isWalking variable.
+
+
+j: When pressing j, the robot starts or stops jumping by updating the isJumping variable.
+
+
 - Any final improvements (design tweaks, environment polish).
-- Screenshots 
+
+
+Improved Lighting: Enhanced the lighting using directional and positional lights to provide consistent illumination across the scene.
+
+
+Depth Testing: Enabled depth testing using glEnable(GL_DEPTH_TEST) to ensure the proper rendering order of overlapping objects, improving visual accuracy.
+
+
+Background: Changed the background to a consistent color (light blue) to represent the sky.
+
+
+  
+- Screenshots
+
+<img width="999" alt="Screenshot 1446-10-29 at 4 59 03 PM" src="https://github.com/user-attachments/assets/c111e3d8-a6b9-4c1c-9190-cdd88dadb440" />
+
+
+<img width="387" alt="Depth" src="https://github.com/user-attachments/assets/a8afdd3d-634c-4770-9b7a-ea98015d92ff" />
+
+
+<img width="432" alt="Background" src="https://github.com/user-attachments/assets/3b79127c-4f27-4de9-bfb6-173d74a6d34c" />
+
+
 
 ---
 
