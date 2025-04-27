@@ -91,7 +91,8 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 - Include screenshots of work progress including all the versions you've made.
 
 
-![Uploading Screenshot 1446-10-29 at 5.09.25 PM.png…]()
+<img width="494" alt="Screenshot 1446-10-29 at 5 09 25 PM" src="https://github.com/user-attachments/assets/4563f4a6-709a-4737-9a7e-2913e8cd161c" />
+
 
 
 
@@ -201,7 +202,10 @@ Background: Changed the background to a consistent color (light blue) to represe
 
 | Challenge | Solution |
 |----------|----------|
-| Example: Lighting was too dark | Adjusted light position and material shininess |
+|  Lighting was inconsistent | Adjusted the light intensity and added both directional and positional lights to ensure consistent lighting across the robot and the scene. |
+|  Depth testing was not enabled | Enabled depth testing using glEnable(GL_DEPTH_TEST) to ensure proper rendering of overlapping objects. |
+|  Jumping was not visible | Implemented glTranslatef() with a sine function to simulate vertical motion when isJumping is activated. |
+
 
 ---
 
