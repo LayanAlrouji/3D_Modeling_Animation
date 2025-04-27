@@ -24,12 +24,16 @@ It focuses on 3D modeling, animation, and interactive controls to mimic bird-lik
 ### Week 11
 ## 💡 Phase 1: Lighting, depth setup and first sketch (robot design)
 - Description of the lighting setup and depth applied to the scene:
+
+
 This phase focused on creating a more realistic 3D environment. The primary elements involved in setting up the lighting and depth adjustments include:
 Lighting Setup:
  - Directional Light: Provides consistent lighting from a single direction. This light affects the whole scene equally from a particular 
    angle, much like how the sun illuminates everything in its path.
  - Positional Light: Radiates from a specific point, affecting only nearby objects. It is commonly used to mimic point lights such as light 
    bulbs. This type of light helps create dynamic lighting effects and adds realism to the scene.
+
+
 Depth Setup:
 To ensure objects are rendered correctly in relation to one another, depth testing was enabled. This allows the program to handle overlapping objects and render them in the correct order, ensuring that closer objects are drawn in front of farther ones. 
 
