@@ -7,26 +7,45 @@ This README serves as the full report for the Computer Graphics course project. 
 
 ## 📘 Project Overview
 
-Briefly describe your robot design, the inspiration (animal), and your development goals.
+In this project, I designed a bird-inspired robot using basic 3D shapes. It includes:
+ - A spherical body and head.
+ - Moving legs to simulate walking.
+ - Rotating wings to simulate bird-like motion.
+The goal of this project is to create smooth and repeatable movements, providing simple interaction through keyboard controls for walking and jumping.
+It focuses on 3D modeling, animation, and interactive controls to mimic bird-like movements.
 
 ---
 
 ## 👥 Team Members & Roles
 
-- Member 1: name / id (leader)
-- Member 2: name / id
-- Member 3: name / id
+- Member 1: Layan Alrouji Alrouji / 444008839 (leader)
 
 ---
 ### Week 11
 ## 💡 Phase 1: Lighting, depth setup and first sketch (robot design)
+- Description of the lighting setup and depth applied to the scene:
+This phase focused on creating a more realistic 3D environment. The primary elements involved in setting up the lighting and depth adjustments include:
+Lighting Setup:
+ - Directional Light: Provides consistent lighting from a single direction. This light affects the whole scene equally from a particular 
+   angle, much like how the sun illuminates everything in its path.
+ - Positional Light: Radiates from a specific point, affecting only nearby objects. It is commonly used to mimic point lights such as light 
+   bulbs. This type of light helps create dynamic lighting effects and adds realism to the scene.
+Depth Setup:
+To ensure objects are rendered correctly in relation to one another, depth testing was enabled. This allows the program to handle overlapping objects and render them in the correct order, ensuring that closer objects are drawn in front of farther ones. 
 
-- Description of the lighting setup and depth applied to the scene.
-- pictures of your design sketch 
+- pictures of your design sketch
+![IMG_2754](https://github.com/user-attachments/assets/38184551-6475-4201-8b1b-9e7199905dc1)
+ 
 - Screenshots and code snippets if relevant
+ <img width="437" alt="Screenshot 1446-10-29 at 3 15 30 AM" src="https://github.com/user-attachments/assets/faedd160-c866-4c2f-b9ca-b60975f610b6" />
+
 - describe Challenges and how you addressed them in the challenge table below.( for example GitHub issues that you've faced at this stage and how you solve them with screenshots)
+  Challenge 1 : The lighting caused incorrect shading on parts of the robot.
+  Solution : Adjusted lighting intensity, added a second light source.
 
-
+  Challenge 2 : Objects were overlapping incorrectly due to disabled depth testing.
+  Solution : Enabled depth testing with glEnable(GL_DEPTH_TEST)
+  
 ---
 ### Week 12
 ## ✅ Phase 2: Robot Construction
