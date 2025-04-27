@@ -89,6 +89,12 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 
 
 - Include screenshots of work progress including all the versions you've made.
+
+
+![Uploading Screenshot 1446-10-29 at 5.09.25 PM.png…]()
+
+
+
 <img width="647" alt="Screenshot 1446-10-29 at 3 34 17 AM" src="https://github.com/user-attachments/assets/912bc5fe-6423-4fb1-8df5-494f5531eb73" />
 
 
@@ -100,8 +106,6 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 
 
 
-ذ
-
 ---
 ### Week 13
 ## 🦿 Phase 3: Basic Animation
@@ -112,7 +116,7 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 The robot’s parts that simulate movement:
 
 
-Legs: The legs were animated using rotation to simulate walking. The rotation of the legs is controlled by the legMovem variable, which increases over time to create the walking motion.
+Legs: The legs were animated using rotation to simulate walking. The rotation of the legs is controlled by the legMove variable, which increases over time to create the walking motion.
 
 
 
@@ -120,7 +124,7 @@ Head: The head rotates using the headRotate variable to simulate head turning, a
 
 
 
-Wings: The wings are rotated to simulate bird motion, controlled by the wingMovem variable. This rotation makes the wings flap back and forth.
+Wings: The wings are rotated to simulate bird motion, controlled by the wingMove variable. This rotation makes the wings flap back and forth.
 
 
 
@@ -130,15 +134,15 @@ Wings: The wings are rotated to simulate bird motion, controlled by the wingMove
 Animation logic :
   
 
-Legs Animation: glRotatef(legMovement, 1.0f, 0.0f, 0.0f) used to animate the legs. The value of legMove increases with each frame, and when it exceeds a limit it resets to 0.0f.
+Legs Animation: glRotatef(legMove, 1.0f, 0.0f, 0.0f) used to animate the legs. The value of legMove increases with each frame, and when it exceeds a limit it resets to 0.0f.
 
 
 
-Head Animation: glRotatef(headRotation, 0.0f, 1.0f, 0.0f) used to animate the head rotation. The value of headRotate increments continuously, and when it exceeds a certain angle it resets to -45.0f, ensuring smooth rotation.
+Head Animation: glRotatef(headRotate, 0.0f, 1.0f, 0.0f) used to animate the head rotation. The value of headRotate increments continuously, and when it exceeds a certain angle it resets to -45.0f, ensuring smooth rotation.
 
 
 
-Wings Animation: glRotatef(wingMovement, 1.0f, 0.0f, 0.0f). The wingMove variable is updated, and when it reaches the maximum rotation it resets to -30.0f, simulating flapping.
+Wings Animation: glRotatef(wingMove, 1.0f, 0.0f, 0.0f). The wingMove variable is updated, and when it reaches the maximum rotation it resets to -30.0f, simulating flapping.
 
 
 hierarchical modeling techniques :
@@ -181,7 +185,10 @@ Background: Changed the background to a consistent color (light blue) to represe
 <img width="999" alt="Screenshot 1446-10-29 at 4 59 03 PM" src="https://github.com/user-attachments/assets/c111e3d8-a6b9-4c1c-9190-cdd88dadb440" />
 
 
+
 <img width="387" alt="Depth" src="https://github.com/user-attachments/assets/a8afdd3d-634c-4770-9b7a-ea98015d92ff" />
+
+
 
 
 <img width="432" alt="Background" src="https://github.com/user-attachments/assets/3b79127c-4f27-4de9-bfb6-173d74a6d34c" />
