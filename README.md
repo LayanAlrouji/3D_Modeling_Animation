@@ -200,7 +200,8 @@ Background: Changed the background to a consistent color (light blue) to represe
 
 
 
-![image](https://github.com/user-attachments/assets/f452cddc-d4c3-4076-8c1b-1d5d880088c8)
+![image](https://github.com/user-attachments/assets/6887e8f8-d2d1-4af3-9f9f-9cb27f4b1d33)
+
 
 
 
