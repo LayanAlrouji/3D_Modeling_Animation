@@ -45,7 +45,12 @@ To ensure objects are rendered correctly in relation to one another, depth testi
 ![IMG_2754](https://github.com/user-attachments/assets/38184551-6475-4201-8b1b-9e7199905dc1)
  
 - Screenshots and code snippets if relevant
- <img width="437" alt="Screenshot 1446-10-29 at 3 15 30 AM" src="https://github.com/user-attachments/assets/faedd160-c866-4c2f-b9ca-b60975f610b6" />
+![image](https://github.com/user-attachments/assets/98b48e30-8762-4f78-ad2e-9175d8b349bb)
+
+
+![image](https://github.com/user-attachments/assets/2393c986-6138-46fd-8664-a2d9aab5973c)
+
+
 
 - describe Challenges and how you addressed them in the challenge table below.( for example GitHub issues that you've faced at this stage and how you solve them with screenshots)
 
@@ -91,12 +96,19 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 - Include screenshots of work progress including all the versions you've made.
 
 
-<img width="494" alt="Screenshot 1446-10-29 at 5 09 25 PM" src="https://github.com/user-attachments/assets/4563f4a6-709a-4737-9a7e-2913e8cd161c" />
+![image](https://github.com/user-attachments/assets/3c3425a6-7b38-46c3-8e93-f4a0640e98a6)
 
 
 
 
-<img width="647" alt="Screenshot 1446-10-29 at 3 34 17 AM" src="https://github.com/user-attachments/assets/912bc5fe-6423-4fb1-8df5-494f5531eb73" />
+
+![image](https://github.com/user-attachments/assets/9f25ff70-81fb-4baf-bae1-62af8893a26c)
+
+
+
+
+![image](https://github.com/user-attachments/assets/406400b6-d42c-4a68-a282-6cfa47fc0f3e)
+
 
 
 
