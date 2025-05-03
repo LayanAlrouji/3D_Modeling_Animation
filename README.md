@@ -195,16 +195,13 @@ Background: Changed the background to a consistent color (light blue) to represe
   
 - Screenshots
 
-<img width="999" alt="Screenshot 1446-10-29 at 4 59 03 PM" src="https://github.com/user-attachments/assets/c111e3d8-a6b9-4c1c-9190-cdd88dadb440" />
-
-
-
-<img width="387" alt="Depth" src="https://github.com/user-attachments/assets/a8afdd3d-634c-4770-9b7a-ea98015d92ff" />
+![image](https://github.com/user-attachments/assets/807de10a-50f9-4d88-a009-d19f2d6ce13f)
 
 
 
 
-<img width="432" alt="Background" src="https://github.com/user-attachments/assets/3b79127c-4f27-4de9-bfb6-173d74a6d34c" />
+![image](https://github.com/user-attachments/assets/f452cddc-d4c3-4076-8c1b-1d5d880088c8)
+
 
 
 
