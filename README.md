@@ -85,7 +85,7 @@ Legs: The legs of the robot were initially represented by spheres. These were po
 
 
 
-Wings: The wings are represented by spheres that rotate around an axis, simulating the movement of a bird's wings.
+Wings: The wings are represented by spheres that simulating the bird's wings.
 
 
 
