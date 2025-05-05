@@ -95,18 +95,8 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 - Include screenshots of work progress including all the versions you've made.
 
 
-![image](https://github.com/user-attachments/assets/3c3425a6-7b38-46c3-8e93-f4a0640e98a6)
+![image](https://github.com/user-attachments/assets/79dac0c2-3480-45cb-8b3b-38bf27a8d04d)
 
-
-
-
-
-![image](https://github.com/user-attachments/assets/9f25ff70-81fb-4baf-bae1-62af8893a26c)
-
-
-
-
-![image](https://github.com/user-attachments/assets/406400b6-d42c-4a68-a282-6cfa47fc0f3e)
 
 
 
