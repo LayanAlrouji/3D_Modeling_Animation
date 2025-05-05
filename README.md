@@ -14,7 +14,7 @@ In this project, I designed a bird-inspired robot using basic 3D shapes. It incl
 
 
 The goal of this project is to create smooth and repeatable movements, providing simple interaction through keyboard controls for walking and jumping.
-It focuses on 3D modeling, animation, and interactive controls to mimic bird-like movements.
+It focuses on 3D modeling, animation, and interactive controls.
 
 ---
 
@@ -60,6 +60,7 @@ To ensure objects are rendered correctly in relation to one another, depth testi
 
 
   Challenge 2 : Objects were overlapping incorrectly due to disabled depth testing.
+
   Solution : Enabled depth testing with glEnable(GL_DEPTH_TEST)
   
 ---
@@ -81,7 +82,7 @@ Head: The head is also modeled using a smaller sphere placed on top of the body.
 
 
 
-Legs: The legs of the robot were initially represented by spheres. These were positioned appropriately and rotated to simulate walking motion.
+Legs: The legs of the robot were initially represented by spheres. These were positioned appropriately and it's simulate walking and jumping.
 
 
 
@@ -89,7 +90,7 @@ Wings: The wings are represented by spheres that simulating the bird's wings.
 
 
 
-glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modeling. Each part of the robot (body, head, legs, wings) was treated as a separate unit that can move independently while keeping the entire structure intact.
+glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modeling. Each part of the robot was treated as a separate unit that can move independently while keeping the entire structure intact.
 
 
 - Include screenshots of work progress including all the versions you've made.
@@ -105,7 +106,7 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 
   Challenge 1 : The legs didn’t move or simulate walking.
 
-  Solution : Used sphere rotation to simulate the movement of the legs back and forth.
+  Solution : Used sphere to simulate the movement of the legs back and forth.
 
 
 
@@ -121,7 +122,7 @@ The robot’s parts that simulate movement:
 
 The legs were animated using Translate function to simulate walking and jumping of the robot. 
 
-The Translate of the legs is controlled by the legMove variable and jumpMovement variable , which increases over time to create the walking motion.
+The Translate of the legs is controlled by the legMovement variable and jumpMovement variable , which increases over time to create the walking motion.
 
 
 
@@ -132,9 +133,12 @@ Animation logic :
   
 
 Legs Animation for walking : glTranslatef(legMovement, 0.0F, 0.0f) used to animate the legs walking. 
-The value of legMove increases with each frame, and when it exceeds a limit it resets to 0.0f.
+
+The value of legMovement increases with each frame, and when it exceeds a limit it resets to 0.0f (-30).
+
 
 Legs Animation for jumping : glTranslatef(0.0f, jumpMovement, 0.0f) used to animate the jumping fot the legs. 
+
 The value of jumpMovement increases with each frame, and when it exceeds a limit it resets to 0.0f.
 
 
@@ -145,7 +149,7 @@ hierarchical modeling techniques :
 
 glPushMatrix() & glPopMatrix() functions : used to isolate transformations for each body part without affecting the others. 
 
-This ensures each part of the robot can move independently.
+This ensures that the robot can move independently.
 
 
  
@@ -183,12 +187,15 @@ Background: Changed the background to a consistent color (light blue) to represe
   
 - Screenshots
 
-![image](https://github.com/user-attachments/assets/807de10a-50f9-4d88-a009-d19f2d6ce13f)
+
+![image](https://github.com/user-attachments/assets/20bd3cd3-c560-4ba1-8614-6c7c652d7f28)
 
 
 
 
-![image](https://github.com/user-attachments/assets/6887e8f8-d2d1-4af3-9f9f-9cb27f4b1d33)
+
+![image](https://github.com/user-attachments/assets/3e130728-4d28-4338-b1aa-8253a70a27d0)
+
 
 
 
@@ -202,7 +209,7 @@ Background: Changed the background to a consistent color (light blue) to represe
 |----------|----------|
 |  Lighting was inconsistent | Adjusted the light intensity and added both directional and positional lights to ensure consistent lighting across the robot and the scene. |
 |  Depth testing was not enabled | Enabled depth testing using glEnable(GL_DEPTH_TEST) to ensure proper rendering of overlapping objects. |
-|  Jumping was not visible | Implemented glTranslatef() with a sine function to simulate vertical motion when isJumping is activated. |
+|  Jumping was not visible | Implemented glTranslatef() to simulate vertical motion when isJumping is activated. |
 
 
 ---
@@ -238,7 +245,7 @@ I learned a lot about 3D modeling and animation using OpenGL and GLUT. Some of t
 Most Challenging Part:
 
 
-The most challenging aspect of the project was animating the robot smoothly. Getting the legs to walk, the head to rotate, and the wings to flap, while balancing the speed of the movements and ensuring everything loops properly, was difficult.
+The most challenging aspect of the project was animating the robot smoothly. Getting the legs to walk and jump while balancing the speed of the movements and ensuring everything loops properly, was difficult.
 Additionally, depth testing and lighting adjustments were also challenging, especially when ensuring the robot’s parts were properly lit and rendered correctly without visual glitches.
 
 
