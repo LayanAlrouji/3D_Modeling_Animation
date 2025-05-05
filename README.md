@@ -9,8 +9,8 @@ This README serves as the full report for the Computer Graphics course project. 
 
 In this project, I designed a bird-inspired robot using basic 3D shapes. It includes:
  - A spherical body and head.
- - Moving legs to simulate walking.
- - Rotating wings to simulate bird-like motion.
+ - Moving legs to simulate walking and jumping.
+ - Wings to simulate bird wings.
 
 
 The goal of this project is to create smooth and repeatable movements, providing simple interaction through keyboard controls for walking and jumping.
