@@ -45,10 +45,9 @@ To ensure objects are rendered correctly in relation to one another, depth testi
 ![IMG_2754](https://github.com/user-attachments/assets/38184551-6475-4201-8b1b-9e7199905dc1)
  
 - Screenshots and code snippets if relevant
-![image](https://github.com/user-attachments/assets/98b48e30-8762-4f78-ad2e-9175d8b349bb)
 
+![image](https://github.com/user-attachments/assets/ae146abc-2873-41fd-9e69-924ee2600cf9)
 
-![image](https://github.com/user-attachments/assets/2393c986-6138-46fd-8664-a2d9aab5973c)
 
 
 
