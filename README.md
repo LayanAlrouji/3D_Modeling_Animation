@@ -104,6 +104,7 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 - describe Challenges and how you addressed them in the challenge table below.
 
   Challenge 1 : The legs didn’t move or simulate walking.
+
   Solution : Used sphere rotation to simulate the movement of the legs back and forth.
 
 
@@ -118,15 +119,9 @@ glPushMatrix() and glPopMatrix() were used to ensure proper hierarchical modelin
 The robot’s parts that simulate movement:
 
 
-Legs: The legs were animated using rotation to simulate walking. The rotation of the legs is controlled by the legMove variable, which increases over time to create the walking motion.
+The legs were animated using Translate function to simulate walking and jumping of the robot. 
 
-
-
-Head: The head rotates using the headRotate variable to simulate head turning, allowing the robot to look around.
-
-
-
-Wings: The wings are rotated to simulate bird motion, controlled by the wingMove variable. This rotation makes the wings flap back and forth.
+The Translate of the legs is controlled by the legMove variable and jumpMovement variable , which increases over time to create the walking motion.
 
 
 
@@ -136,22 +131,26 @@ Wings: The wings are rotated to simulate bird motion, controlled by the wingMove
 Animation logic :
   
 
-Legs Animation: glRotatef(legMove, 1.0f, 0.0f, 0.0f) used to animate the legs. The value of legMove increases with each frame, and when it exceeds a limit it resets to 0.0f.
+Legs Animation for walking : glTranslatef(legMovement, 0.0F, 0.0f) used to animate the legs walking. 
+The value of legMove increases with each frame, and when it exceeds a limit it resets to 0.0f.
+
+Legs Animation for jumping : glTranslatef(0.0f, jumpMovement, 0.0f) used to animate the jumping fot the legs. 
+The value of jumpMovement increases with each frame, and when it exceeds a limit it resets to 0.0f.
 
 
-
-Head Animation: glRotatef(headRotate, 0.0f, 1.0f, 0.0f) used to animate the head rotation. The value of headRotate increments continuously, and when it exceeds a certain angle it resets to -45.0f, ensuring smooth rotation.
-
-
-
-Wings Animation: glRotatef(wingMove, 1.0f, 0.0f, 0.0f). The wingMove variable is updated, and when it reaches the maximum rotation it resets to -30.0f, simulating flapping.
 
 
 hierarchical modeling techniques :
 
 
-glPushMatrix() & glPopMatrix() functions : used to isolate transformations for each body part (legs, head, wings) without affecting the others. This ensures each part of the robot can move independently.
+glPushMatrix() & glPopMatrix() functions : used to isolate transformations for each body part without affecting the others. 
+
+This ensures each part of the robot can move independently.
+
+
  
+<img width="581" alt="Screenshot 1446-11-07 at 8 22 49 AM" src="https://github.com/user-attachments/assets/7996e582-51ee-49b9-b58f-54e472876294" />
+
 
 ---
 ### Week 15
