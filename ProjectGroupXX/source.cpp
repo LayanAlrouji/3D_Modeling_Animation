@@ -17,19 +17,96 @@ bool leftButtonDown = false;
 bool rightButtonDown = false;
 // Camera distance from center
 float radius = 100.0f;
-//----------end of Camera movement----------------------------//
-
+//----------end of Camera movement----------------------------
 // you can add and update variables here
 int width = 800;
 int height = 600;
 
+// Animation flags
+float legMovement = 0.0f;
+float headRotation = 0.0f;
+float wingMovement = 0.0f;
+float jumpMovement = 0.0f;
+float jumpDirection = 1.0f;
+
+bool isWalking = false;
+bool isJumping = false;
+
+// Draw the robot
+ void drawRobot() {
+        // Body
+        glPushMatrix();
+        glColor3f(1.0f, 0.5f, 0.0f);
+        glutSolidSphere(2.0, 50, 50);
+        glPopMatrix();
+
+        // Head
+        glPushMatrix();
+        glColor3f(0.8f, 0.4f, 0.0f);
+        glTranslatef(0.0f, 2.5f, 0.0f);
+        glutSolidSphere(1.0, 50, 50);
+        glPopMatrix();
+
+        // Left Leg
+        glPushMatrix();
+        glColor3f(0.6f, 0.3f, 0.1f);
+        glTranslatef(-1.0f, -2.5f, 0.0f);
+        glRotatef(legMovement, 1.0f, 0.0f, 0.0f);
+        glutSolidSphere(0.5, 50, 50);
+        glPopMatrix();
+        // Right Leg
+        glPushMatrix();
+        glColor3f(0.6f, 0.3f, 0.1f);
+        glTranslatef(1.0f, -2.5f, 0.0f);
+        glRotatef(-legMovement, 1.0f, 0.0f, 0.0f);
+        glutSolidSphere(0.5, 50, 50);
+        glPopMatrix();
+
+        // Left Wings
+        glPushMatrix();
+        glColor3f(0.5f, 0.5f, 0.5f);
+        glTranslatef(2.5f, 0.0f, 0.0f);
+        glutSolidSphere(0.8, 50, 50);
+        glPopMatrix();
+        // Right Wings
+        glPushMatrix();
+        glColor3f(0.5f, 0.5f, 0.5f);
+        glTranslatef(-2.5f, 0.0f, 0.0f);
+        glutSolidSphere(0.8, 50, 50);
+        glPopMatrix();
+    }
 
 
+// Update animations
+ void updateAnimation() {
+        if (isWalking) {
+            legMovement += 0.01f;
+            if (legMovement > 30.0f) legMovement = -30.0f;
+        }
+        else {
+            if (legMovement > 0) legMovement -= 1.0f;
+            if (legMovement < 0) legMovement += 1.0f;
+        }
+
+
+        if (isJumping) {
+            jumpMovement += jumpDirection * 0.01f;
+            if (jumpMovement > 5.0f) jumpDirection = -1.0f;
+            if (jumpMovement < 0.0f) jumpDirection = 1.0f;
+        }
+        else {
+            if (jumpMovement > 0) jumpMovement -= 0.5f;
+            if (jumpMovement < 0) jumpMovement = 0;
+        }
+
+        glutPostRedisplay();
+    }
 
 
 
 void draw() {
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClearColor(0.53f, 0.81f, 0.98f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
 
     //***** Convert spherical to Cartesian coordinates (DO NOT CHANGE)
@@ -40,18 +117,10 @@ void draw() {
 
     gluLookAt(camX, camY, camZ, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 
-
-
     //************Start drawing here *****************
-    // use the teapot and the base plane to test your lightening and depth then  remove this part and draw your own object 
-    glColor3f(1.0f, 0.0f, 0.0f);
-    glPushMatrix();
-    glTranslatef(0, -12.5, 0);
-    glutSolidTeapot(10.0);  // test object 
-    glPopMatrix();
 
-    // BASE PLANE ( YOU CAN CHANGE IT
-    glColor3f(0.0f, 0.0f, 1.0f);
+    // BASE PLANE 
+    glColor3f(0.4f, 0.8f, 0.4f);
     glBegin(GL_QUADS);
     glVertex3f(50, -20, 50);
     glVertex3f(50, -20, -50);
@@ -59,9 +128,18 @@ void draw() {
     glVertex3f(-50, -20, 50);
     glEnd();
 
+    //sun:
+    glPushMatrix();
+    glColor3f(1.0f, 1.0f, 0.0f);
+    glTranslatef(0.0f, 30.0f, -50.0f);
+    glutSolidSphere(5.0, 50, 50);
+    glPopMatrix();
 
-
-
+    glPushMatrix();
+    glTranslatef(0.0f, jumpMovement, 0.0f);
+    glTranslatef(legMovement, 0.0F, 0.0f);
+    drawRobot();
+    glPopMatrix();
 
     glFlush();
 }
@@ -113,17 +191,40 @@ void keyboard(unsigned char key, int x, int y) {
         angleY = DEFAULT_ANGLE_Y;
         radius = DEFAULT_RADIUS;
         break;
+    case 'w':
+        isWalking = !isWalking;
+        break;
+    case 'j':
+        isJumping = !isJumping;
+        break;
     default:
         return;
     }
-    glutPostRedisplay(); //requests a redraw of the window.
-
 }
 
 int main() {
-    glutInitDisplayMode(GLUT_RGBA);
+    glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH);
     glutInitWindowSize(width, height);
-    glutCreateWindow("Write Your Group number");
+    glutCreateWindow("905");
+
+    glEnable(GL_DEPTH_TEST);
+
+    // Dierctional
+    GLfloat pos[] = { 1.0f, 1.0f, 1.0f, 0.0f };
+    GLfloat color[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    glLightfv(GL_LIGHT0, GL_POSITION, pos);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, color);
+    glEnable(GL_LIGHT0);
+
+    // Positional
+    GLfloat pos2[] = { -1.0f, -1.0f, 1.0f, 1.0f };
+    glLightfv(GL_LIGHT1, GL_POSITION, pos2);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, color);
+    glEnable(GL_LIGHT1);
+
+    glEnable(GL_LIGHTING);
+
+    glEnable(GL_COLOR_MATERIAL);
 
 
     // Setup perspective projection
@@ -133,16 +234,13 @@ int main() {
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
-
-    glutDisplayFunc(draw);
-
-
     // ****** Interaction : handlers ( DO NOT CHANGE)
     glutMouseFunc(mouse);  //  mouse button click/release handler
     glutMotionFunc(motion); // Register a callback for mouse motion while a button is held down (dragging)
     glutKeyboardFunc(keyboard);  // Register keyboard handler
     // ****** end of interaction
 
-
+    glutDisplayFunc(draw);
+    glutIdleFunc(updateAnimation);
     glutMainLoop();
 }
