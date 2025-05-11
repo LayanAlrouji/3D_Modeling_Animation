@@ -24,8 +24,6 @@ int height = 600;
 
 // Animation flags
 float legMovement = 0.0f;
-float headRotation = 0.0f;
-float wingMovement = 0.0f;
 float jumpMovement = 0.0f;
 float jumpDirection = 1.0f;
 
@@ -51,14 +49,12 @@ bool isJumping = false;
         glPushMatrix();
         glColor3f(0.6f, 0.3f, 0.1f);
         glTranslatef(-1.0f, -2.5f, 0.0f);
-        glRotatef(legMovement, 1.0f, 0.0f, 0.0f);
         glutSolidSphere(0.5, 50, 50);
         glPopMatrix();
         // Right Leg
         glPushMatrix();
         glColor3f(0.6f, 0.3f, 0.1f);
         glTranslatef(1.0f, -2.5f, 0.0f);
-        glRotatef(-legMovement, 1.0f, 0.0f, 0.0f);
         glutSolidSphere(0.5, 50, 50);
         glPopMatrix();
 
@@ -74,12 +70,8 @@ bool isJumping = false;
         glTranslatef(-2.5f, 0.0f, 0.0f);
         glutSolidSphere(0.8, 50, 50);
         glPopMatrix();
-    }
 
-
-// Update animations
- void updateAnimation() {
-        if (isWalking) {
+      if (isWalking) {
             legMovement += 0.01f;
             if (legMovement > 30.0f) legMovement = -30.0f;
         }
@@ -98,10 +90,7 @@ bool isJumping = false;
             if (jumpMovement > 0) jumpMovement -= 0.5f;
             if (jumpMovement < 0) jumpMovement = 0;
         }
-
-        glutPostRedisplay();
     }
-
 
 
 void draw() {
@@ -241,6 +230,6 @@ int main() {
     // ****** end of interaction
 
     glutDisplayFunc(draw);
-    glutIdleFunc(updateAnimation);
+    glutIdleFunc(draw);
     glutMainLoop();
 }
